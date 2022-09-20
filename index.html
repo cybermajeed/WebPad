@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="Version" content="21.12.06" />
     <meta name="Author" content="CyberMajeed" />
-    <link rel="shortcut icon" href="WebPad.png" />
+    <link rel="shortcut icon" href="src/WebPad.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Pad</title>
     <style>
@@ -510,7 +510,7 @@
     <span class="backgroundBox"></span>
     <div class="helpBox">
       <span class="close">
-        <img src="WebPad.png" style="margin-right: 5px; height: 30px" />
+        <img src="src/WebPad.png" style="margin-right: 5px; height: 30px" />
         <b>Web Pad</b>
         <em>&times;</em>
       </span>
@@ -879,7 +879,7 @@
       window.onkeyup = (e) => {
         if (e.ctrlKey && e.keyCode === 13) {
           runCode.click();
-        } else if (e.ctrlKey && e.shiftKey && e.keyCode === 83) {
+        } else if (e.ctrlKey && e.altKey && e.keyCode === 83) {
           saveFile.click();
         } else if (e.keyCode === 27) {
           cancelButton.click();
@@ -888,7 +888,7 @@
       };
       //===================window.onload===================
       window.onload = () => {
-        let loadDelayArray = [500, 1000, 1500];
+        let loadDelayArray = [500, 1000, 1500, 2000, 2500];
         let loadDelay =
           loadDelayArray[Math.floor(Math.random() * loadDelayArray.length)];
         document.head.innerHTML += `<style> 
@@ -907,12 +907,12 @@
             clickEvent.initEvent("dblclick", true, true);
             runCode.dispatchEvent(clickEvent);
           }
-          //show helpbox?
+          //show helpbox?=======================
           if (localStorage.showHelpBox == "true") {
             helpBox.style.display = "none";
             document.querySelector(".backgroundBox").style.display = "none";
           }
-          //end
+          //end=======================
         }, loadDelay);
       };
     </script>
