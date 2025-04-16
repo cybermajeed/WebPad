@@ -499,7 +499,7 @@
         visibility: visible;
         opacity: 1;
       }
-      /*alert box ends*/ ;
+      /*alert box ends*/
     </style>
   </head>
   <body>
@@ -888,32 +888,22 @@
       };
       //===================window.onload===================
       window.onload = () => {
-        let loadDelayArray = [500, 1000, 1500, 2000, 2500];
-        let loadDelay =
-          loadDelayArray[Math.floor(Math.random() * loadDelayArray.length)];
-        document.head.innerHTML += `<style> 
-          #onLoader span:before {
-            animation: load ${loadDelay}ms linear forwards;
-          }
-        </style>`;
-        setTimeout(() => {
-          let onLoad = document.getElementById("onLoader");
-          onLoad.style.display = "none";
-          //other Func
-          runCode.click();
-          //dblclick?
-          if (localStorage.autoCodeRunner == "Enabled") {
-            var clickEvent = document.createEvent("MouseEvents");
-            clickEvent.initEvent("dblclick", true, true);
-            runCode.dispatchEvent(clickEvent);
-          }
-          //show helpbox?=======================
-          if (localStorage.showHelpBox == "true") {
-            helpBox.style.display = "none";
-            document.querySelector(".backgroundBox").style.display = "none";
-          }
-          //end=======================
-        }, loadDelay);
+        let onLoad = document.getElementById("onLoader");
+        onLoad.style.display = "none";
+        //other Func
+        runCode.click();
+        //dblclick?
+        if (localStorage.autoCodeRunner == "Enabled") {
+          var clickEvent = document.createEvent("MouseEvents");
+          clickEvent.initEvent("dblclick", true, true);
+          runCode.dispatchEvent(clickEvent);
+        }
+        //show helpbox?=======================
+        if (localStorage.showHelpBox == "true") {
+          helpBox.style.display = "none";
+          document.querySelector(".backgroundBox").style.display = "none";
+        }
+        //end=======================
       };
     </script>
   </body>
