@@ -352,7 +352,10 @@ iframe.previewFrame {
   transition: all 0.2s;
 }
 .helpBox .close em:hover {
-  text-shadow: 0px 0px 3px red, 0px 0px 3px red, 0px 0px 3px red;
+  text-shadow:
+    0px 0px 3px red,
+    0px 0px 3px red,
+    0px 0px 3px red;
   transform: scale(1.4);
 }
 .helpBox span.close b {

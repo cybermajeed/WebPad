@@ -291,11 +291,11 @@ document.querySelectorAll(".theme_n").forEach((theme_i) => {
     //
     document.documentElement.style.setProperty(
       "--dark-theme",
-      getComputedStyle(code_mirror).background
+      getComputedStyle(code_mirror).background,
     );
     document.documentElement.style.setProperty(
       "--dark-theme-text",
-      getComputedStyle(document.querySelector(`span.cm-tag`)).color
+      getComputedStyle(document.querySelector(`span.cm-tag`)).color,
     );
     //
     tools.classList.add("darkTools");
@@ -322,11 +322,11 @@ function applyDarkToolbar() {
   if (cm && tag) {
     document.documentElement.style.setProperty(
       "--dark-theme",
-      getComputedStyle(cm).backgroundColor
+      getComputedStyle(cm).backgroundColor,
     );
     document.documentElement.style.setProperty(
       "--dark-theme-text",
-      getComputedStyle(tag).color
+      getComputedStyle(tag).color,
     );
   }
 }
