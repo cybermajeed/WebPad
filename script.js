@@ -349,7 +349,7 @@ window.onload = () => {
   if (localStorage.userTheme) {
     themeLink.href = `https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/${localStorage.userTheme}.min.css`;
     code_mirror.className = `CodeMirror cm-s-${localStorage.userTheme}`;
-    setTimeout(applyDarkToolbar, 50);
+    setTimeout(applyDarkToolbar, 100);
   }
   //show helpbox?=======================
   if (localStorage.showHelpBox == "true") {
